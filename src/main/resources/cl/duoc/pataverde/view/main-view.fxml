@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12" prefWidth="780" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cl.duoc.pataverde.controller.MainController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="Clínica Veterinaria PataVerde"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="12" vgap="8">
+        <!-- Fila 0 -->
+        <Label text="Tipo" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="cmbTipo" promptText="Seleccione" prefWidth="180"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Nombre" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtNombre" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <!-- Fila 1 -->
+        <Label text="Edad" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtEdad" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Peso (kg)" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtPeso" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+        <!-- Fila 2: datos del perro -->
+        <Label text="Raza (perro)" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtRaza" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <CheckBox fx:id="chkVacunado" text="Vacunado"
+                  GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <CheckBox fx:id="chkAdopcion" text="Disponible para adopción"
+                  GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+        <!-- Fila 3: dato del gato -->
+        <CheckBox fx:id="chkExterior" text="Vive en exterior"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button fx:id="btnRegistrar" text="Registrar" onAction="#onRegistrar"/>
+        <Button fx:id="btnEliminar" text="Eliminar" onAction="#onEliminar"/>
+    </HBox>
+
+    <TableView fx:id="tablaMascotas" prefHeight="260">
+        <columns>
+            <TableColumn fx:id="colTipo" text="Tipo"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colEdad" text="Edad"/>
+            <TableColumn fx:id="colPeso" text="Peso (kg)"/>
+            <TableColumn fx:id="colCosto" text="Costo consulta"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+
+    <Label fx:id="lblMensaje" wrapText="true" minHeight="40" maxWidth="Infinity"
+           style="-fx-border-color: #999999; -fx-padding: 8;"/>
+</VBox>

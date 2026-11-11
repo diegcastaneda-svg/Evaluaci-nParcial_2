@@ -1,0 +1,9 @@
+cl\duoc\pataverde\dao\MascotaJsonDao.class
+cl\duoc\pataverde\model\Perro.class
+cl\duoc\pataverde\model\Mascota.class
+cl\duoc\pataverde\dao\MascotaDao.class
+cl\duoc\pataverde\App.class
+cl\duoc\pataverde\Launcher.class
+cl\duoc\pataverde\model\Adoptable.class
+cl\duoc\pataverde\model\Gato.class
+cl\duoc\pataverde\controller\MainController.class

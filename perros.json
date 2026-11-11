@@ -1,0 +1,10 @@
+[
+  {
+    "raza": "doberman",
+    "vacunado": true,
+    "disponibleAdopcion": false,
+    "nombre": "rodolfo",
+    "edad": 10,
+    "peso": 15.0
+  }
+]
